@@ -3,6 +3,7 @@
     --gray: #c0c0c0;
     --green: #84c51f;
     --second-bg: #eaf6e8;
+    --gray-text: #797a7c;
 }
 
 *{
@@ -13,6 +14,7 @@
     outline: none;
     border: none;
     text-decoration: none;
+    overflow-x: hidden;
 }
 
 section{
@@ -35,6 +37,12 @@ header{
     background: var(--blue);
 }
 
+#menu{
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
 
 header ul{
     display: flex;
@@ -43,6 +51,7 @@ header ul{
 
 header ul li{
     margin-left: 2rem;
+    padding: 1.4rem 0;
 }
 
 header ul li a{
@@ -60,7 +69,7 @@ header .signup-btn{
 
 .home{
     background: var(--blue);
-    height: 78vh;
+    height: 100%;
 }
 
 .home .home-main{
@@ -85,6 +94,7 @@ header .signup-btn{
 
 .home .home-main p span a{
     color: #93d0ff;
+    font-size: 2rem;
 }
 
 .home .home-form{
@@ -144,12 +154,8 @@ header .signup-btn{
     font-size: 1.5rem;
     margin: 0;
     padding: 0;
-}
-
-.container-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: bold;
+    color: #fff;
 }
 
 .container-box .box{
@@ -217,19 +223,9 @@ header .signup-btn{
 }
 
 .container-boxs{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     padding: 0 8%;
     margin: 0;
     background: var(--second-bg);
-}
-
-.container-boxs .box{
-    padding: 1rem;
-    width: 44%;
-    padding:1rem 4rem;
 }
 
 .container-boxs .box .box-icon{
@@ -249,9 +245,6 @@ header .signup-btn{
 }
 
 .review-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: var(--second-bg);
     padding: 4rem 16%;
 }
@@ -367,6 +360,15 @@ header .signup-btn{
     font-size: 1.6rem;
 }
 
+.freshbooks-reports button{
+    font-size: 2rem;
+    background: var(--green);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: .6rem;
+    border: .1rem solid #6a9624;
+}
+
 .freshbooks-reports-boxs{
     display: flex;
     justify-content: center;
@@ -379,7 +381,6 @@ header .signup-btn{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 4rem;
 }
 
 .freshbooks-reports-boxs .box i{
@@ -424,4 +425,156 @@ header .signup-btn{
 
 .footer-banner{
     height: 100%;
+}
+
+.footer .footer-top .footer-boxs{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer .footer-top .footer-boxs .footer-box ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .footer-top .footer-boxs .footer-box ul li{
+    margin: .4rem 0;
+    padding: 0;
+}
+
+.footer .footer-top .footer-boxs .footer-box ul li a, h3, p{
+    font-size: 1.4rem;
+    color: var(--gray-text);
+}
+
+
+.footer .footer-top .footer-boxs .footer-box img{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.footer .footer-bottom{
+    border-top: .1rem solid var(--gray-text);
+    padding-top: 2rem;
+}
+
+.footer .footer-bottom .footer-bottom-left p, a{
+    font-size: 1.2rem;
+}
+
+.footer .footer-bottom .footer-bottom-left a{
+    color: var(--gray-text);
+    border-right: .1rem solid var(--gray-text);
+}
+
+.award-winning{
+    background-image: url('./images/group-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.award-winning .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.award-winning .container h1{
+    font-size: 5rem;
+}
+
+.award-winning .container p{
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.award-winning .container span{
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.award-winning .container div{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: .5rem;
+}
+
+
+
+@media (max-width: 970px){
+    html{
+        font-size: 55%;
+    }
+    section{
+        padding: 2rem 6%;
+    }
+    .review-box{
+        padding: 4rem 8% ;
+    }
+    .container-boxs{
+        padding: 0 6%;
+    }
+}
+
+@media (max-width: 882px){
+    #menu{
+        display: block;
+    }
+    header{
+        padding: 0 8%;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        position: relative;
+    }
+    header .navbar{
+        flex-direction: column;
+        position: absolute;
+        top: 10rem;
+        background: red;
+    }
+    header .navbar ul{
+        display: flex;
+        flex-direction: column;
+        background: var(--gray);
+    }
+    header .navbar ul li{
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 570px){
+    .footer .footer-top .footer-boxs .footer-box{
+        margin: 1rem 0;
+    }
+    .home .home-form .form-input input{
+        width: 100%;
+    }
+    .footer-bottom .footer-bottom-right{
+        margin: 1rem 0;
+    }
+    h1{
+        font-size: 3rem !important;
+    }
+    .award-winning .container div{
+        flex-direction: column;
+    }
 }
